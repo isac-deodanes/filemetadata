@@ -1,0 +1,126 @@
+COMANDO PARA INSTALAR PROGRAMAS:
+sudo dpkg -i Nombreprograma.deb
+
+sudo apt --fix-broken install  # por si faltan dependencias
+
+
+
+
+
+docker para ver todas las imagnes
+
+docker ps -a
+
+
+
+
+
+para crear un contenedor 
+
+docker run [opciones] nombre_imagen	
+
+ejemplo
+docker run -d --name mi_nginx -p 8080:80 nginx
+
+
+
+COMO INICIAR UN  CONTENEDOR 
+docker start mi_nginx
+
+
+
+
+comandos para detener y borrar contenedores imagen en docker 
+
+docker stop id_del_contenedor
+
+docker rm id_del_contenedor
+
+
+VER TODO LOS CONTENEDORES ACTIVOS Y INACTIVOS
+docker ps -a
+
+
+
+ELIMINAR TODOS LOS CONTENEDORES DETENIDO 
+
+docker container prune
+
+
+
+COMNADO PARA DIRIGIRSE AL NAVEGADOR CON EL PUERTO ESPECIFICADO
+
+docker run -d -p 8080:80 nginx
+
+
+
+
+
+EL COMANDO PULL NOS PERMITE DESCARGAR LA IMAGEN 
+
+docker pull nginx
+
+
+
+
+
+CREAR CONTENEDORES CON NOMBRE Y IMAGEN
+
+docker create --name nombreContenedor mongo <--------- nombre de la imagen
+
+
+CREAR CONTENEDORES CON NOMBRES Y PUERTOS Y IMAMGEN
+
+docker create -p27017:27017 --name nombreContenedor mongo
+
+INICIAR EL CONTENEDOR MONGO
+
+docker start nombreContenedor
+
+
+
+
+CLAVES
+
+pub   ed25519 2025-08-12 [SC] [caduca: 2028-08-11]
+      C8122149E2A2371DAE63D5AF1EAAA42715971C75
+uid                      isac deodanes <isacdeodanes@gmail.com>
+sub   cv25519 2025-08-12 [E] [caduca: 2028-08-11]
+
+
+
+-------------------------------------------------------------------------------
+
+mkdir: se ha creado el directorio '/home/isac/.password-store/'
+Password store initialized for C8122149E2A2371DAE63D5AF1EAAA42715971C75
+
+
+
+
+
+docker run -it --rm -d -p 8080:80 --name miWeb deodanes503/misitio001:latest
+
+
+
+
+COMANDO PARA INICIAR XAMPP
+
+
+
+sudo /opt/lampp/manager-linux-x64.run
+
+
+
+
+COMNADO PARA UTILIZAR EL PHP DE XAMPP
+
+ESTO VAN DENTRO DEL PROYECTO 
+/opt/lampp/bin/php /usr/local/bin/composer install
+
+
+/opt/lampp/bin/php artisan serve
+
+
+
+COMANDO PARA INICIAR DOCKER, POR QUE KVM ESTA DESABILITADO POR USAR VIRTUABOX
+~/usar_docker_con_kvm.sh
